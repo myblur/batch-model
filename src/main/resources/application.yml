@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: batch-model
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/gateway
+    username: gateway
+    password: gateway233
+mybatis:
+  mapper-locations: classpath:sqlmap/*.xml
+  type-aliases-package: io.shadow.bm.mapper
+  configuration:
+    map-underscore-to-camel-case: true
+    default-statement-timeout: 30
+logging:
+  level:
+    root: info
+    org.springframework.jdbc.datasource: debug
